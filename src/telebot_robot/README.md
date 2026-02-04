@@ -59,29 +59,6 @@ To get started, you’ll need:
    ```
    This brings up the telebot environment in Gazebo and Rviz.
 
-### 3. Creating the `telebot_navigation` Package
-1. In your workspace, create a new package:
-   ```bash
-   ros2 pkg create telebot_navigation --build-type ament_cmake
-   ```
-2. Set up the necessary directories for parameters, launch files, and scripts.
-3. Write proper build commands in CMakeLists.txt for your navigation package.
 
-### 4. Map Loading
-1. Use the map provided in `telebot_bringup/maps/telebot_world.yaml`.
-2. Write actions in the launch file `telebot_navigation/launch/map_loader.launch.py` to load the map using the `map_server` plugin.
-3. Test and confirm that the map is loaded correctly in Rviz.
-
-### 5. Localization
-1. Implement localization with the AMCL plugin:
-   - Write a parameter file for AMCL in `telebot_navigation/config/amcl_params.yaml`.
-   - Create actions in the launch file `telebot_navigation/launch/localization.launch.py` to run AMCL.
-   - Verify that the robot can localize itself in the simulated environment using Rviz.
-
-### 6. Navigation
-1. Set up navigation using `nav2` plugins:
-   - Configure parameter files for the global and local planners, behaviour tree plugins and any other nav2 plugin you want to use, like 'collision_monitor' or 'velocity_smoother', in `telebot_navigation/config/nav2_params.yaml`.
-   - Write actions in the launch file `telebot_navigation/launch/navigation.launch.py` to bring up the navigation workflow.
-2. Test the navigation setup by sending goals to the robot and observing its behavior.
 
 
